@@ -66,8 +66,8 @@ async def start(bot, cmd):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('♨️MoviesBazzz♨️', url='https://t.me/joinchat/32maowwC8Y1lNWJl'),
-                        InlineKeyboardButton('⚡️Group⚡️', url='https://t.me/MoviesBazzz_Group')
+                        InlineKeyboardButton('♨️CinemaCompany♨️', url='https://t.me/joinchat/vUwe6gVIfQJmOTk1'),
+                        InlineKeyboardButton('⚡️Group⚡️', url='https://t.me/CinemaCompany_Group')
                     ]
                     ]
                 await bot.send_cached_media(
@@ -99,8 +99,8 @@ async def start(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("♨️MoviesBazzz♨️", url='https://t.me/joinchat/32maowwC8Y1lNWJl'),
-                        InlineKeyboardButton("Owner", url="https://t.me/Souk26")
+                        InlineKeyboardButton("♨️CinemaCompany♨️", url='https://t.me/joinchat/vUwe6gVIfQJmOTk1'),
+                        InlineKeyboardButton("Owner", url="https://t.me/anonymous7205")
                     ],
                     [
                         InlineKeyboardButton("About", callback_data="about")
@@ -192,8 +192,8 @@ async def delete(bot, message):
 async def bot_info(bot, message):
     buttons = [
         [
-            InlineKeyboardButton('♨️MoviesBazzz♨️', url='https://t.me/joinchat/32maowwC8Y1lNWJl'),
-            InlineKeyboardButton('⚡️Owner⚡️', url='https://t.me/Souk26')
+            InlineKeyboardButton('♨️CinemaCompany♨️', url='https://t.me/joinchat/vUwe6gVIfQJmOTk1'),
+            InlineKeyboardButton('⚡️Owner⚡️', url='https://t.me/anonymous7205')
         ]
         ]
-    await message.reply(text="<b>Developer : <a href='https://t.me/Souk26'>SOURAV</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\n⚡️Owner⚡️ : <a href='https://t.me/Souk26'>@Souk26</a>\nMain Channel : <a href='https://t.me/joinchat/32maowwC8Y1lNWJl'>♨️MoviesBazzz♨️</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+    await message.reply(text="<b>Developer : <a href='https://t.me/anonymous7205'>SOURAV</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\n⚡️Owner⚡️ : <a href='https://t.me/anonymous7205'>@Souk26</a>\nMain Channel : <a href='https://t.me/joinchat/vUwe6gVIfQJmOTk1'>♨️CinemaCompany♨️</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
