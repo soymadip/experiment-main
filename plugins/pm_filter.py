@@ -88,7 +88,7 @@ async def filter(client, message):
             return
 
         data = BUTTONS[keyword]
-        buttons = data[0].copy()
+        buttons = data['buttons'][0].copy()
 
         buttons.append(
             [InlineKeyboardButton(text="NEXT ⏩",callback_data=f"next_0_{keyword}")]
@@ -151,7 +151,7 @@ async def group(client, message):
             return
 
         data = BUTTONS[keyword]
-        buttons = data[0].copy()
+        buttons = data['buttons'][0].copy()
 
         buttons.append(
             [InlineKeyboardButton(text="NEXT ⏩",callback_data=f"next_0_{keyword}")]
@@ -204,7 +204,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 return
 
             if int(index) == int(data["total"]) - 2:
-                buttons = data[int(index)+1].copy()
+                buttons = data['buttons'][int(index)+1].copy()
 
                 buttons.append(
                     [InlineKeyboardButton("⏪ BACK", callback_data=f"back_{int(index)+1}_{keyword}")]
@@ -218,7 +218,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 )
                 return
             else:
-                buttons = data[int(index)+1].copy()
+                buttons = data['buttons'][int(index)+1].copy()
 
                 buttons.append(
                     [InlineKeyboardButton("⏪ BACK", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{int(index)+1}_{keyword}")]
@@ -242,7 +242,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 return
 
             if int(index) == 1:
-                buttons = data[int(index)-1].copy()
+                buttons = data['buttons'][int(index)-1].copy()
 
                 buttons.append(
                     [InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{int(index)-1}_{keyword}")]
@@ -256,7 +256,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 )
                 return   
             else:
-                buttons = data[int(index)-1].copy()
+                buttons = data['buttons'][int(index)-1].copy()
 
                 buttons.append(
                     [InlineKeyboardButton("⏪ BACK", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{int(index)-1}_{keyword}")]
