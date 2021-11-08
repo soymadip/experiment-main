@@ -53,7 +53,7 @@ async def answer(bot, query):
                 title=file.file_name,
                 file_id=file.file_id,
                 caption=f_caption,
-                description=f'Type: {file.file_type}',
+                description=f'Size: {get_size(file.file_size)}\nType: {file.file_type}',
                 reply_markup=reply_markup))
 
     if results:
@@ -77,7 +77,7 @@ async def answer(bot, query):
     else:
 
         switch_pm_text = f'{emoji.CROSS_MARK} No results'
-        if string:  
+        if string:
             switch_pm_text += f' for "{string}"'
 
         await query.answer(results=[],
