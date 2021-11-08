@@ -66,7 +66,7 @@ async def start(bot, cmd):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('♨️CinemaCompany♨️', url='https://t.me/joinchat/vUwe6gVIfQJmOTk1'),
+                        InlineKeyboardButton('♨️CinemaCompany', url='https://t.me/joinchat/vUwe6gVIfQJmOTk1'),
                         InlineKeyboardButton('⚡️Group⚡️', url='https://t.me/CinemaCompany_Group')
                     ]
                     ]
