@@ -55,7 +55,7 @@ async def filter(client, message):
             for file in files:
                 file_id = file.file_id
                 filename = f"{file.file_name}"
-                btn.prop(
+                btn.append(
                     [InlineKeyboardButton(text=f"{filename}",callback_data=f"subinps#{file_id}")]
                     )
         else:
@@ -74,7 +74,7 @@ async def filter(client, message):
             }
         else:
             buttons = btn
-            buttons.prop(
+            buttons.append(
                 [InlineKeyboardButton(text="📃 Page info 1/1",callback_data="pages")]
             )
             poster=None
@@ -90,10 +90,10 @@ async def filter(client, message):
         data = BUTTONS[keyword]
         buttons = data['buttons'][0].copy()
 
-        buttons.prop(
+        buttons.append(
             [InlineKeyboardButton(text="NEXT ⏩",callback_data=f"next_0_{keyword}")]
         )    
-        buttons.prop(
+        buttons.append(
             [InlineKeyboardButton(text=f"📃 Page info 1/{data['total']}",callback_data="pages")]
         )
         poster=None
@@ -121,7 +121,7 @@ async def group(client, message):
             for file in files:
                 file_id = file.file_id
                 filename = f"{file.file_name}"
-                btn.prop(
+                btn.append(
                     [InlineKeyboardButton(text=f"{filename}", url=f"https://telegram.dog/{nyva}?start=subinps_-_-_-_{file_id}")]
                 )
         else:
@@ -138,7 +138,7 @@ async def group(client, message):
             }
         else:
             buttons = btn
-            buttons.prop(
+            buttons.append(
                 [InlineKeyboardButton(text="📃 Page info 1/1",callback_data="pages")]
             )
             poster=None
@@ -153,10 +153,10 @@ async def group(client, message):
         data = BUTTONS[keyword]
         buttons = data['buttons'][0].copy()
 
-        buttons.prop(
+        buttons.append(
             [InlineKeyboardButton(text="NEXT ⏩",callback_data=f"next_0_{keyword}")]
         )    
-        buttons.prop(
+        buttons.append(
             [InlineKeyboardButton(text=f"📃 Page info 1/{data['total']}",callback_data="pages")]
         )
         poster=None
@@ -206,10 +206,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             if int(index) == int(data["total"]) - 2:
                 buttons = data['buttons'][int(index)+1].copy()
 
-                buttons.prop(
+                buttons.append(
                     [InlineKeyboardButton("⏪ BACK", callback_data=f"back_{int(index)+1}_{keyword}")]
                 )
-                buttons.prop(
+                buttons.append(
                     [InlineKeyboardButton(f"📃 Page info {int(index)+2}/{data['total']}", callback_data="pages")]
                 )
 
@@ -220,10 +220,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             else:
                 buttons = data['buttons'][int(index)+1].copy()
 
-                buttons.prop(
+                buttons.append(
                     [InlineKeyboardButton("⏪ BACK", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{int(index)+1}_{keyword}")]
                 )
-                buttons.prop(
+                buttons.append(
                     [InlineKeyboardButton(f"📃 Page info {int(index)+2}/{data['total']}", callback_data="pages")]
                 )
 
@@ -244,10 +244,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             if int(index) == 1:
                 buttons = data['buttons'][int(index)-1].copy()
 
-                buttons.prop(
+                buttons.append(
                     [InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
-                buttons.prop(
+                buttons.append(
                     [InlineKeyboardButton(f"📃 Pages {int(index)}/{data['total']}", callback_data="pages")]
                 )
 
@@ -258,10 +258,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             else:
                 buttons = data['buttons'][int(index)-1].copy()
 
-                buttons.prop(
+                buttons.append(
                     [InlineKeyboardButton("⏪ BACK", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
-                buttons.prop(
+                buttons.append(
                     [InlineKeyboardButton(f"📃 Page info {int(index)}/{data['total']}", callback_data="pages")]
                 )
 
