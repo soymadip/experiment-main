@@ -99,7 +99,7 @@ async def start(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("♨️CinemaCompany♨️", url='https://t.me/joinchat/vUwe6gVIfQJmOTk1'),
+                        InlineKeyboardButton("♨️CinemaHub♨️", url='https://t.me/joinchat/vUwe6gVIfQJmOTk1'),
                         InlineKeyboardButton("Owner", url="https://t.me/anonymous7205")
                     ],
                     [
@@ -192,8 +192,8 @@ async def delete(bot, message):
 async def bot_info(bot, message):
     buttons = [
         [
-            InlineKeyboardButton('♨️CinemaCompany♨️', url='https://t.me/joinchat/vUwe6gVIfQJmOTk1'),
+            InlineKeyboardButton('♨️CinemaHub♨️', url='https://t.me/joinchat/vUwe6gVIfQJmOTk1'),
             InlineKeyboardButton('⚡️Owner⚡️', url='https://t.me/anonymous7205')
         ]
         ]
-    await message.reply(text="<b>Developer : <a href='https://t.me/anonymous7205'>SOUMADIP</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\n⚡️Owner⚡️ : <a href='https://t.me/anonymous7205'>@Souk26</a>\nMain Channel : <a href='https://t.me/joinchat/vUwe6gVIfQJmOTk1'>♨️CinemaCompany♨️</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+    await message.reply(text="<b>Developer : <a href='https://t.me/anonymous7205'>SOUMADIP</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\n⚡️Owner⚡️ : <a href='https://t.me/anonymous7205'>@Souk26</a>\nMain Channel : <a href='https://t.me/joinchat/vUwe6gVIfQJmOTk1'>♨️CinemaHub♨️</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
