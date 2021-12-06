@@ -67,7 +67,7 @@ async def start(bot, cmd):
                 buttons = [
                     [
                         InlineKeyboardButton('♨️CinemaCompany', url='https://t.me/joinchat/vUwe6gVIfQJmOTk1'),
-                        InlineKeyboardButton('⚡️Group⚡️', url='https://t.me/CinemaCompany_Group')
+                        InlineKeyboardButton('⚡️Group⚡️', url='https://t.me/cinemaforyou07')
                     ]
                     ]
                 await bot.send_cached_media(
