@@ -59,14 +59,14 @@ async def filter(client, message):
                     [InlineKeyboardButton(text=f"{filename}",callback_data=f"subinps#{file_id}")]
                     )
         else:
-            await message.reply_text(f"<b>Dont send NAME here , Request in group.\n If you send here again, I will Ban you </b>")
+            await message.reply_text(f"<b>🤬Dont send NAME here, Request in GROUP💢.\n\n 👊 If you send here again, I will Ban you  </b>")
             return
 
         if not btn:
             return
 
-        if len(btn) > 10: 
-            btns = list(split_list(btn, 10)) 
+        if len(btn) > 11: 
+            btns = list(split_list(btn, 11)) 
             keyword = f"{message.chat.id}-{message.message_id}"
             BUTTONS[keyword] = {
                 "total" : len(btns),
@@ -129,8 +129,8 @@ async def group(client, message):
         if not btn:
             return
 
-        if len(btn) > 10: 
-            btns = list(split_list(btn, 10)) 
+        if len(btn) > 11: 
+            btns = list(split_list(btn, 11)) 
             keyword = f"{message.chat.id}-{message.message_id}"
             BUTTONS[keyword] = {
                 "total" : len(btns),
@@ -174,9 +174,9 @@ def get_size(size):
     units = ["Bytes", "KB", "MB", "GB", "TB", "PB", "EB"]
     size = float(size)
     i = 0
-    while size >= 1024.0 and i < len(units):
+    while size >= 1124.0 and i < len(units):
         i += 1
-        size /= 1024.0
+        size /= 1124.0
     return "%.2f %s" % (size, units[i])
 
 def split_list(l, n):
