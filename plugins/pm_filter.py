@@ -59,7 +59,7 @@ async def filter(client, message):
                     [InlineKeyboardButton(text=f"{filename}",callback_data=f"subinps#{file_id}")]
                     )
         else:
-            await message.reply_text(f"<b>Dont send Name here,request in group. if you send here again,I will Ban you </b>")
+            await message.reply_text(f"<b>Dont send NAME here , Request in group.\n If you send here again, I will Ban you </b>")
             return
 
         if not btn:
