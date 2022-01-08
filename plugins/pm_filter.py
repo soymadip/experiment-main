@@ -292,7 +292,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         print(e)
                         f_caption=f_caption
                 if f_caption is None:
-                    f_caption = f"<b>📕 File Name:</b>{file_name}\n\n<b>📕 File Size:</b>{file_size}\n\n<b>Join [CinemaHub](https://t.me/cinemaforyou07) for requesting movies.</b>"
+                    f_caption = f"{files.file_name}"
                 buttons = [
                     [
                         InlineKeyboardButton('♨️CinemaCompany♨️', url='https://t.me/cinemaforyou07'),
@@ -324,7 +324,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         print(e)
                         f_caption=f_caption
                 if f_caption is None:
-                    f_caption = f"<b>📕 File Name:</b>{file_name}\n\n<b>📕 File Size:</b>{file_size}\n\n<b>Join [CinemaHub](https://t.me/cinemaforyou07) for requesting movies.</b>"
+                    f_caption = f"{title}"
                 buttons = [
                     [
                         InlineKeyboardButton('♨️CinemaCompany♨️', url='https://t.me/cinemaforyou07'),
